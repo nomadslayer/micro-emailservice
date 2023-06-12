@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "b6b28270-6d74-47ee-83b9-802883f68d31",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27919513"
+	},
+	"item": [
+		{
+			"name": "Get Emails",
+			"protocolProfileBehavior": {
+				"followOriginalHttpMethod": false,
+				"followAuthorizationHeader": false,
+				"followRedirects": true,
+				"removeRefererHeaderOnRedirect": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "12345",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/api/email"
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "12345",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"subject\" :\"H21\",\n    \"body\":\"Test email21\",\n    \"send_to\":\"d4gitalnomad@gmail.com\",\n    \"from_email\":\"d4gitalspace@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/email"
+			},
+			"response": []
+		}
+	]
+}
